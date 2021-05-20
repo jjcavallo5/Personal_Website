@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .Nav-Bar {
     position: absolute;
     top: 10px;
@@ -118,5 +122,123 @@
 
     100% {
         opacity: 0.5;
+    }
+}
+
+.Carousel {
+    height: 100vh;
+    width: 100%;
+    background-color: #333333;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.Left-Arrow,
+.Right-Arrow {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: darkgray;
+}
+
+.Left-Arrow:hover,
+.Right-Arrow:hover {
+    cursor: pointer;
+}
+
+.Left-Arrow {
+    left: 3vw;
+    z-index: 1;
+}
+
+.Right-Arrow {
+    right: 3vw;
+    z-index: 1;
+}
+
+.Carousel-Container {
+    height: 90%;
+    width: 90%;
+    position: relative;
+}
+
+.Page {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.One {
+    display: flex;
+}
+
+.One h1,
+.Two h1,
+.Three h1,
+.Four h1 {
+    font-size: 3rem;
+    margin-bottom: 5rem;
+}
+
+.Page-One-Wrap,
+.Page-Two-Wrap,
+.Page-Three-Wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.Page-One-Wrap > *,
+.Page-Two-Wrap > *,
+.Page-Three-Wrap > * {
+    width: 20%;
+}
+
+.Page-One-Wrap p,
+.Page-Two-Wrap p,
+.Page-Three-Wrap p {
+    margin-left: 3rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+.Page-One-Wrap img:hover,
+.One h1:hover,
+.Page-Two-Wrap img:hover,
+.Two h1:hover {
+    cursor: pointer;
+}
+
+.Two {
+    display: none;
+}
+
+.Three {
+    display: none;
+}
+
+.Page-Three-Wrap img {
+    width: 15%;
+}
+
+.Four {
+    display: none;
+}
+
+@media (min-width: 600px) {
+    .Left-Arrow,
+    .Right-Arrow {
+        height: 100px;
+        width: 100px;
     }
 }
