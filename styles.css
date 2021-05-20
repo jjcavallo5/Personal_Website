@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#Home,
+#About,
+#Portfolio,
+#Contact {
+    display: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Mobile-Menu {
+    display: none;
+    flex-direction: column;
+    background-color: blue;
+    width: 40%;
+    position: absolute;
+    top: 0;
+}
+
+.Mobile-Menu button {
+    background-color: blue;
+    border: none;
+    padding: 0.5rem;
+}
+
+.Top-Gradient {
+    height: 5vh;
+    width: 100%;
+    background-image: linear-gradient(to right, #0b2c48, #145da0, #0b2c48);
+}
+
+.Header {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: #145da0;
+}
+
+.Header h1 {
+    font-family: "Magneto";
+    font-size: 3rem;
+}
+
+.Image-Links {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+}
+
+.Image-Links img {
+    width: 100%;
+    max-width: 250px;
+}
+
+.Image-Links img:hover {
+    cursor: pointer;
+}
+
+.About-Picture,
+.Projects-Picture,
+.Contact-Picture {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Quote {
+    width: 90%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.Quote h3 {
+    font-family: "Segoe Script";
+    padding-bottom: 0.5rem;
+    padding-left: 0.3rem;
+}
+
+.Quote p {
+    font-family: "Vladimir Script";
+    font-size: 1.6rem;
+}
+
+.Footer {
+    width: 100%;
+    background-color: #145da0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: white;
+}
+
+.Footer h3 {
+    padding: 0.3rem;
+}
+
+.Footer h3:hover {
+    cursor: pointer;
+    color: #2e8bc0;
+}
+
+@media (min-width: 600px) {
+    .Image-Links {
+        flex-direction: row;
+    }
+
+    .About-Picture,
+    .Projects-Picture,
+    .Contact-Picture {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+
+        animation: Fade-In;
+        animation-duration: 5s;
+    }
+
+    .About-Picture-Hover,
+    .Projects-Picture-Hover,
+    .Contact-Picture-Hover {
+        opacity: 0;
+        position: absolute;
+        height: 70%;
+        width: 90%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .About-Picture-Hover:hover,
+    .Projects-Picture-Hover:hover,
+    .Contact-Picture-Hover:hover {
+        cursor: pointer;
+        opacity: 0.8;
+        background-color: #0c2d48;
+    }
+
+    .Header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 4rem;
+    }
+
+    .Header h1 {
+        animation: Grow-In;
+        animation-duration: 2s;
+    }
+
+    .Left-Buttons,
+    .Right-Buttons {
+        display: flex;
+        flex-direction: row;
+        height: 60px;
+        width: 200px;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    .Left-Buttons {
+        animation: From-Left 4s;
+    }
+
+    .Right-Buttons {
+        animation: From-Right 4s;
+    }
+
+    #Home,
+    #About,
+    #Portfolio,
+    #Contact {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        padding: 5px;
+        font-size: 1rem;
+    }
+
+    #Home:hover,
+    #About:hover,
+    #Portfolio:hover,
+    #Contact:hover {
+        cursor: pointer;
+    }
+
+    .Quote {
+        margin-top: 8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: #b1d4e0;
+    }
+
+    .Quote h3 {
+        max-width: 500px;
+        margin-top: 4rem;
+        font-size: 2rem;
+    }
+
+    .Quote p {
+        font-size: 1.8rem;
+        margin-bottom: 4rem;
+    }
+
+    .Footer {
+        font-size: 1.5rem;
+    }
+
+    .Footer h3 {
+        padding: 2rem;
+        animation: Rotate;
+        animation-duration: 2s;
+    }
+}
+
+@keyframes Fade-In {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes Grow-In {
+    from {
+        font-size: 0px;
+    }
+    to {
+        font-size: 3rem;
+    }
+}
+
+@keyframes From-Left {
+    from {
+        margin-left: -1000px;
+        margin-right: auto;
+    }
+    to {
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+}
+
+@keyframes From-Right {
+    from {
+        margin-right: -1000px;
+        margin-left: auto;
+    }
+    to {
+        margin-right: 5vw;
+        margin-left: 5vw;
+    }
+}
