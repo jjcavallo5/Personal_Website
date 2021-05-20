@@ -82,19 +82,42 @@ body {
 
 .Quote {
     width: 90%;
+    height: 400px;
     padding-top: 2rem;
     padding-bottom: 2rem;
+    overflow: hidden;
+    position: relative;
 }
 
-.Quote h3 {
+#Shown,
+#Hidden {
     font-family: "Segoe Script";
     padding-bottom: 0.5rem;
     padding-left: 0.3rem;
 }
 
+#Hidden {
+    position: absolute;
+    animation: New-Quote;
+    animation-duration: 2s;
+    animation-play-state: paused;
+    display: block;
+}
+
+#Shown {
+    position: absolute;
+    transform: translateX(250%);
+    animation: Old-Quote;
+    animation-duration: 2s;
+    animation-play-state: paused;
+    display: block;
+}
+
 .Quote p {
     font-family: "Vladimir Script";
     font-size: 1.6rem;
+    position: absolute;
+    bottom: -15px;
 }
 
 .Footer {
@@ -282,5 +305,38 @@ body {
     to {
         margin-right: 5vw;
         margin-left: 5vw;
+    }
+}
+
+@keyframes New-Quote {
+    0% {
+        transform: translateX(-300%);
+    }
+    50% {
+        transform: translateX(-90%);
+    }
+    75% {
+        transform: translateX(-115%);
+    }
+    100% {
+        transform: translateX(0);
+        display: block;
+        animation-play-state: running;
+    }
+}
+
+@keyframes Old-Quote {
+    0% {
+        transform: translateX(0);
+        display: block;
+    }
+    80% {
+        transform: translateX(0);
+        display: block;
+    }
+    100% {
+        transform: translateX(300%);
+        display: none;
+        animation-play-state: paused;
     }
 }

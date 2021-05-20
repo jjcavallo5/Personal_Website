@@ -60,7 +60,8 @@ html {
 #GitHub-Logo:hover,
 .Git-Page h2:hover,
 #Arrow:hover,
-.Nav-Bar img:hover {
+.Nav-Bar img:hover,
+#UpArrow:hover {
     cursor: pointer;
 }
 
@@ -79,6 +80,16 @@ html {
     animation: Fade-In-Arrow;
     animation-duration: 4s;
     opacity: 0.5;
+}
+#UpArrow {
+    width: 57px;
+    position: absolute;
+    top: 10px;
+    animation: Fade-In-Arrow;
+    animation-duration: 4s;
+    opacity: 0.5;
+    transform: rotate(180deg);
+    z-index: 2;
 }
 
 @keyframes GitHub-Mark-Bounce {
@@ -136,6 +147,16 @@ html {
     align-items: center;
 }
 
+/* #UpArrow {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    transform: rotate(180deg);
+    top: 5px;
+} */
+
 .Left-Arrow,
 .Right-Arrow {
     position: absolute;
@@ -143,6 +164,9 @@ html {
     width: 50px;
     border-radius: 50%;
     background-color: darkgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .Left-Arrow:hover,
@@ -215,7 +239,9 @@ html {
 .Page-One-Wrap img:hover,
 .One h1:hover,
 .Page-Two-Wrap img:hover,
-.Two h1:hover {
+.Two h1:hover,
+.Page-Three-Wrap img:hover,
+.Three h1:hover {
     cursor: pointer;
 }
 
@@ -233,6 +259,22 @@ html {
 
 .Four {
     display: none;
+}
+
+.Left-Triangle {
+    width: 0;
+    height: 0;
+    border-right: 20px solid black;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+}
+
+.Right-Triangle {
+    width: 0;
+    height: 0;
+    border-left: 20px solid black;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
 }
 
 @media (min-width: 600px) {

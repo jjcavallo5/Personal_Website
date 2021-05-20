@@ -34,8 +34,12 @@
                 </div>
             </div>
             <div class="Projects-Picture">
-                <img src="images/Code_Image.jpg" alt="A picture of code" />
-                <div class="Projects-Picture-Hover">
+                <img
+                    src="images/Code_Image.jpg"
+                    alt="A picture of code"
+                    onClick="portfolioClicked()"
+                />
+                <div class="Projects-Picture-Hover" onClick="portfolioClicked()">
                     <h2>Current Projects</h2>
                 </div>
             </div>
@@ -47,17 +51,21 @@
             </div>
         </div>
         <div class="Quote">
-            <h3>
+            <h3 id="Hidden">
                 Two things are infinite: the universe and human stupidity; and I'm not sure about
                 the universe.
             </h3>
-            <p>-Albert Einstein</p>
+            <h3 id="Shown">
+                The important thing is to not stop questioning. Curiosity has its own reason for
+                existing.
+            </h3>
+            <p onClick="activateQuote()">-Albert Einstein</p>
         </div>
         <div class="Footer">
-            <h3>Instagram</h3>
-            <h3>Twitter</h3>
-            <h3>LinkedIn</h3>
-            <h3>GitHub</h3>
+            <h3 onClick="parent.open('https://www.instagram.com/jeremy_cavallo_/')">Instagram</h3>
+            <h3 onClick="parent.open('https://twitter.com/Jeremy_Cavallo')">Twitter</h3>
+            <h3 onClick="parent.open('https://www.linkedin.com/in/jeremy-cavallo/')">LinkedIn</h3>
+            <h3 onClick="parent.open('https://github.com/jjcavallo5')">GitHub</h3>
         </div>
     </body>
     <footer>

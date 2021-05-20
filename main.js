@@ -20,6 +20,16 @@ function arrowClicked() {
     });
 }
 
+function upArrowClicked() {
+    let viewHeight = window.innerHeight;
+    console.log("Arrow");
+    window.scrollBy({
+        top: -viewHeight, // could be negative value
+        left: 0,
+        behavior: "smooth",
+    });
+}
+
 //Deal with carousel
 function rightArrowClicked() {
     let pages = document.querySelectorAll(".Page");
@@ -59,4 +69,12 @@ function leftArrowClicked() {
         pages[activePage].style.display = "none";
         pages[activePage - 1].style.display = "flex";
     }
+}
+
+function activateQuote() {
+    let initQuote = document.getElementById("Shown");
+    let betterQuote = document.getElementById("Hidden");
+
+    initQuote.style.animationPlayState = "running";
+    betterQuote.style.animationPlayState = "running";
 }
