@@ -5,3 +5,7 @@ function homeClicked() {
 function aboutClicked() {
     location.href = "about.html";
 }
+
+function portfolioClicked() {
+    location.href = "portfolio.html";
+}
