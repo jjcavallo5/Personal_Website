@@ -40,15 +40,77 @@ body {
 
 .Header {
     text-align: center;
-    padding: 2rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    height: 95vh;
+    width: 100%;
+    background-image: url("images/peter-gargiulo-cGNCepznaV8-unsplash.jpg");
+    background-size: cover;
     color: #145da0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-.Header h1 {
+#J,
+#C {
+    position: absolute;
     font-family: "Magneto";
+    font-size: 10rem;
+}
+
+#eremy,
+#avallo {
+    position: absolute;
+    font-family: "Magneto";
+    font-size: 5rem;
+}
+
+#J {
+    top: 20rem;
+    left: 43rem;
+    animation: J-Animation;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+#eremy {
+    top: 23rem;
+    left: 50rem;
+    animation: Text-Fade-In;
+    animation-duration: 3s;
+}
+
+#C {
+    top: 30rem;
+    left: 53rem;
+    animation: C-Animation;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+
+#avallo {
+    top: 33rem;
+    left: 60rem;
+    animation: Text-Fade-In;
+    animation-duration: 3s;
+}
+
+#Down-Arrow {
+    position: absolute;
+    height: 80px;
+    bottom: 3rem;
+    animation: Button-Fade-In;
+    animation-duration: 4s;
+    opacity: 0.6;
+}
+
+#Down-Arrow:hover {
+    cursor: pointer;
+}
+
+#Quick-Links {
     font-size: 3rem;
+    margin-bottom: 2rem;
 }
 
 .Image-Links {
@@ -188,29 +250,25 @@ body {
         margin-bottom: 4rem;
     }
 
-    .Header h1 {
-        animation: Grow-In;
-        animation-duration: 2s;
-    }
-
-    .Left-Buttons,
-    .Right-Buttons {
+    .Left-Buttons {
+        position: absolute;
+        top: 8rem;
         display: flex;
         flex-direction: row;
         height: 60px;
-        width: 200px;
-        border-top: 2px solid black;
-        border-bottom: 2px solid black;
-        margin-left: 5vw;
-        margin-right: 5vw;
+        border-top: 2px solid white;
+        border-bottom: 2px solid white;
+        opacity: 0.6;
+        animation: Button-Fade-In;
+        animation-duration: 4s;
     }
 
-    .Left-Buttons {
-        animation: From-Left 4s;
+    .Left-Buttons button {
+        color: white;
     }
 
-    .Right-Buttons {
-        animation: From-Right 4s;
+    .Left-Buttons > * + * {
+        margin-left: 3rem;
     }
 
     #Home,
@@ -286,25 +344,61 @@ body {
     }
 }
 
-@keyframes From-Left {
-    from {
-        margin-left: -1000px;
-        margin-right: auto;
+@keyframes Button-Fade-In {
+    0% {
+        opacity: 0;
     }
-    to {
-        margin-left: 5vw;
-        margin-right: 5vw;
+
+    70% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.6;
     }
 }
 
-@keyframes From-Right {
-    from {
-        margin-right: -1000px;
-        margin-left: auto;
+@keyframes Text-Fade-In {
+    0% {
+        opacity: 0;
     }
-    to {
-        margin-right: 5vw;
-        margin-left: 5vw;
+
+    70% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes J-Animation {
+    0% {
+        transform: translate(-500%, 25%) scale(100%);
+    }
+    75% {
+        transform: translate(50%, 25%) scale(100%);
+    }
+    80% {
+        transform: translate(50%, 25%) scale(50%);
+    }
+    100% {
+        transform: translate(0) scale(100%);
+    }
+}
+
+@keyframes C-Animation {
+    0% {
+        transform: translate(500%, -25%) scale(100%);
+    }
+    75% {
+        transform: translate(-50%, -25%) scale(100%);
+    }
+    80% {
+        transform: translate(-50%, -25%) scale(50%);
+    }
+    100% {
+        transform: translate(0) scale(100%);
     }
 }
 
