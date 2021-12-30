@@ -38,18 +38,32 @@ html {
     justify-content: center;
 }
 
-#GitHub-Mark {
+.git-animation {
     position: absolute;
-    width: 190px;
-    top: 30vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 30vh;
+    width: 80vw;
+    max-width: 500px;
+    min-height: 260px;
+}
+
+#GitHub-Mark {
+    position: relative;
+    width: 30%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
     animation: GitHub-Mark-Bounce;
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
 }
 #GitHub-Logo {
     position: absolute;
-    width: 285px;
-    top: 48vh;
+    width: 50%;
+    top: 55%;
+    left: 25%;
     transform-origin: right;
     animation: GitHub-Logo-Squish;
     animation-duration: 2s;
@@ -68,7 +82,9 @@ html {
 .Git-Page h2 {
     position: absolute;
     color: white;
-    top: 60vh;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
     animation: Fade-In-Arrow;
     animation-duration: 3s;
 }
@@ -97,16 +113,16 @@ html {
         top: -50vh;
     }
     90% {
-        top: 33vh;
+        top: 10%;
     }
     100% {
-        top: 30vh;
+        top: 0;
     }
 }
 
 @keyframes GitHub-Logo-Squish {
     0% {
-        top: 48vh;
+        top: 50%;
         transform: scaleY(100%);
         transform: translateX(280%);
     }
@@ -146,16 +162,6 @@ html {
     justify-content: center;
     align-items: center;
 }
-
-/* #UpArrow {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 150px;
-    transform: rotate(180deg);
-    top: 5px;
-} */
 
 .Left-Arrow,
 .Right-Arrow {
@@ -208,29 +214,38 @@ html {
 .One h1,
 .Two h1,
 .Three h1,
-.Four h1 {
-    font-size: 3rem;
-    margin-bottom: 5rem;
+.Four h1,
+.Five h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .Page-One-Wrap,
 .Page-Two-Wrap,
-.Page-Three-Wrap {
+.Page-Three-Wrap,
+.Page-Four-Wrap {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .Page-One-Wrap > *,
 .Page-Two-Wrap > *,
-.Page-Three-Wrap > * {
-    width: 20%;
+.Page-Three-Wrap > *,
+.Page-Four-Wrap > * {
+    width: 15%;
+    min-width: 250px;
+}
+
+.Page img {
+    min-width: 150px;
 }
 
 .Page-One-Wrap p,
 .Page-Two-Wrap p,
-.Page-Three-Wrap p {
+.Page-Three-Wrap p,
+.Page-Four-Wrap p {
     margin-left: 3rem;
     font-size: 1.4rem;
     line-height: 2rem;
@@ -241,7 +256,9 @@ html {
 .Page-Two-Wrap img:hover,
 .Two h1:hover,
 .Page-Three-Wrap img:hover,
-.Three h1:hover {
+.Three h1:hover,
+.Page-Four-Wrap img:hover,
+.Four h1:hover {
     cursor: pointer;
 }
 
@@ -261,6 +278,10 @@ html {
     display: none;
 }
 
+.Five {
+    display: none;
+}
+
 .Left-Triangle {
     width: 0;
     height: 0;
@@ -277,10 +298,29 @@ html {
     border-bottom: 20px solid transparent;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
     .Left-Arrow,
     .Right-Arrow {
         height: 100px;
         width: 100px;
+    }
+
+    .One h1,
+    .Two h1,
+    .Three h1,
+    .Four h1,
+    .Five h1 {
+        font-size: 3rem;
+        margin-bottom: 5rem;
+    }
+
+    .Page-One-Wrap,
+    .Page-Two-Wrap,
+    .Page-Three-Wrap,
+    .Page-Four-Wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
 }
