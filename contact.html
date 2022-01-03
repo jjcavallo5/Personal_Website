@@ -1,35 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Jeremy Cavallo</title>
-	<link rel="stylesheet" href="contact-styles.css"/>
-    </head>
-    <body>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Jeremy Cavallo</title>
+	<link rel="preload" as="image" href="images/peter-gargiulo-cGNCepznaV8-unsplash.jpg" />
+
+	<link rel="stylesheet" href="contact-styles.css" />
+</head>
+
+<body>
 	<div class="Contact-Container">
 		<div class="Header">
 			<h1>Contact Me</h1>
 		</div>
-		<div class="Icon-Container">
-			<div class="Top-Icons">
-				<div class="Twitter">
-					<h2>Twitter</h2>
-				</div>
-				<div class="Email">
-					<h2>Email</h2>
-				</div>
-			</div>
-			<div class="Bottom-Icons">
-				<div class="Instagram">
-					<h2>Instagram</h2>
-				</div>
-				<div class="GitHub">
-					<h2>GitHub</h2>
-				</div>
-			</div>
-		</div>
+		<form name="contact" netlify>
+			<p><input type="text" name="name" id="name" placeholder="Name"></p>
+			<p><input type="text" name="email" id="email" placeholder="Email"></p>
+			<p><textarea name="message" id="message" cols="30" rows="10" placeholder="Type message here..."></textarea>
+			</p>
+			<p><input type="button" value="Submit" id="submit"></p>
+		</form>
 	</div>
-    </body>
+</body>
+
 </html>

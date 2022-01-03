@@ -52,45 +52,64 @@ body {
     overflow: hidden;
 }
 
+.name-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    transform: translate(-50%, -50%);
+}
+
+.j-container,
+.c-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.c-container {
+    margin-top: -10%;
+    margin-left: 10%;
+}
+
 #J,
 #C {
-    position: absolute;
+    position: relative;
     font-family: "Magneto";
     font-size: 10rem;
 }
 
 #eremy,
 #avallo {
-    position: absolute;
+    position: relative;
     font-family: "Magneto";
     font-size: 5rem;
 }
 
 #J {
-    top: 20rem;
-    left: 43rem;
+    top: 0;
+    left: 0;
     animation: J-Animation;
     animation-duration: 1s;
     animation-timing-function: linear;
 }
 #eremy {
-    top: 23rem;
-    left: 50rem;
+    margin-top: 1rem;
     animation: Text-Fade-In;
     animation-duration: 3s;
 }
 
 #C {
-    top: 30rem;
-    left: 53rem;
+    top: 0;
+    left: 0;
     animation: C-Animation;
     animation-duration: 1s;
     animation-timing-function: linear;
 }
 
 #avallo {
-    top: 33rem;
-    left: 60rem;
+    margin-top: 4rem;
     animation: Text-Fade-In;
     animation-duration: 3s;
 }
@@ -252,7 +271,7 @@ body {
 
     .Left-Buttons {
         position: absolute;
-        top: 8rem;
+        top: 10%;
         display: flex;
         flex-direction: row;
         height: 60px;
@@ -392,10 +411,10 @@ body {
         transform: translate(500%, -25%) scale(100%);
     }
     75% {
-        transform: translate(-50%, -25%) scale(100%);
+        transform: translate(25%, -25%) scale(100%);
     }
     80% {
-        transform: translate(-50%, -25%) scale(50%);
+        transform: translate(25%, -25%) scale(50%);
     }
     100% {
         transform: translate(0) scale(100%);

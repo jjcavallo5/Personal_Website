@@ -10,6 +10,10 @@ function portfolioClicked() {
     location.href = "portfolio.html";
 }
 
+function contactClicked() {
+    location.href = "contact.html";
+}
+
 function arrowClicked() {
     let viewHeight = window.innerHeight;
     console.log("Arrow");

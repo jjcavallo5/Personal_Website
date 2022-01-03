@@ -1,84 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Jeremy Cavallo</title>
-        <link rel="stylesheet" href="styles.css" />
-        <link rel="preload" as="image" href="images/peter-gargiulo-cGNCepznaV8-unsplash.jpg" />
-        <link rel="preload" as="image" href="images/adrien-olichon-_GH9LwhlSO4-unsplash.jpg" />
-    </head>
-    <body>
-        <div class="Top-Gradient"></div>
-        <div class="Header">
-            <div class="Left-Buttons">
-                <button id="Home">Home</button>
-                <button id="About" onClick="aboutClicked()">About</button>
-                <button id="Portfolio" onClick="portfolioClicked()">Portfolio</button>
-                <button id="Contact">Contact</button>
-            </div>
-            <h1 id="J">J</h1>
-            <h1 id="eremy">eremy</h1>
-            <h1 id="C">C</h1>
-            <h1 id="avallo">avallo</h1>
-            <div class="Mobile-Menu">
-                <button id="Home-Mobile">Home</button>
-                <button id="About-Mobile" onClick="aboutClicked()">About</button>
-                <button id="Portfolio-Mobile" onClick="portfolioClicked()">Portfolio</button>
-                <button id="Contact-Mobile">Contact</button>
-            </div>
-            <img
-                src="images/White-Arrow.png"
-                alt="White Arrow"
-                id="Down-Arrow"
-                onClick="arrowClicked()"
-            />
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeremy Cavallo</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preload" as="image" href="images/peter-gargiulo-cGNCepznaV8-unsplash.jpg" />
+    <link rel="preload" as="image" href="images/adrien-olichon-_GH9LwhlSO4-unsplash.jpg" />
+</head>
+
+<body>
+    <div class="Top-Gradient"></div>
+    <div class="Header">
+        <div class="Left-Buttons">
+            <button id="Home">Home</button>
+            <button id="About" onClick="aboutClicked()">About</button>
+            <button id="Portfolio" onClick="portfolioClicked()">Portfolio</button>
+            <button id="Contact" onClick="contactClicked()">Contact</button>
         </div>
-        <h1 id="Quick-Links">Quick Links</h1>
-        <div class="Image-Links">
-            <div class="About-Picture">
-                <img src="images/SnrPic.jpg" alt="A Picture of me" onClick="aboutClicked()" />
-                <div class="About-Picture-Hover" onClick="aboutClicked()">
-                    <h2>About Me</h2>
-                </div>
+        <div class="name-container">
+            <div class="j-container">
+                <h1 id="J">J</h1>
+                <h1 id="eremy">eremy</h1>
             </div>
-            <div class="Projects-Picture">
-                <img
-                    src="images/Code_Image.jpg"
-                    alt="A picture of code"
-                    onClick="portfolioClicked()"
-                />
-                <div class="Projects-Picture-Hover" onClick="portfolioClicked()">
-                    <h2>Current Projects</h2>
-                </div>
-            </div>
-            <div class="Contact-Picture">
-                <img src="images/ContactPicture.png" alt="A Picture of contact links" />
-                <div class="Contact-Picture-Hover">
-                    <h2>Contact Me</h2>
-                </div>
+            <div class="c-container">
+                <h1 id="C">C</h1>
+                <h1 id="avallo">avallo</h1>
             </div>
         </div>
-        <div class="Quote">
-            <h3 id="Hidden">
-                Two things are infinite: the universe and human stupidity; and I'm not sure about
-                the universe.
-            </h3>
-            <h3 id="Shown">
-                The important thing is to not stop questioning. Curiosity has its own reason for
-                existing.
-            </h3>
-            <p onClick="activateQuote()">-Albert Einstein</p>
+        <div class="Mobile-Menu">
+            <button id="Home-Mobile">Home</button>
+            <button id="About-Mobile" onClick="aboutClicked()">About</button>
+            <button id="Portfolio-Mobile" onClick="portfolioClicked()">Portfolio</button>
+            <button id="Contact-Mobile">Contact</button>
         </div>
-        <div class="Footer">
-            <h3 onClick="parent.open('https://www.instagram.com/jeremy_cavallo_/')">Instagram</h3>
-            <h3 onClick="parent.open('https://twitter.com/Jeremy_Cavallo')">Twitter</h3>
-            <h3 onClick="parent.open('https://www.linkedin.com/in/jeremy-cavallo/')">LinkedIn</h3>
-            <h3 onClick="parent.open('https://github.com/jjcavallo5')">GitHub</h3>
+        <img src="images/White-Arrow.png" alt="White Arrow" id="Down-Arrow" onClick="arrowClicked()" />
+    </div>
+    <h1 id="Quick-Links">Quick Links</h1>
+    <div class="Image-Links">
+        <div class="About-Picture">
+            <img src="images/SnrPic.jpg" alt="A Picture of me" onClick="aboutClicked()" />
+            <div class="About-Picture-Hover" onClick="aboutClicked()">
+                <h2>About Me</h2>
+            </div>
         </div>
-    </body>
-    <footer>
-        <script src="main.js"></script>
-    </footer>
+        <div class="Projects-Picture">
+            <img src="images/Code_Image.jpg" alt="A picture of code" onClick="portfolioClicked()" />
+            <div class="Projects-Picture-Hover" onClick="portfolioClicked()">
+                <h2>Current Projects</h2>
+            </div>
+        </div>
+        <div class="Contact-Picture">
+            <img src="images/ContactPicture.png" alt="A Picture of contact links" />
+            <div class="Contact-Picture-Hover">
+                <h2>Contact Me</h2>
+            </div>
+        </div>
+    </div>
+    <div class="Quote">
+        <h3 id="Hidden">
+            Two things are infinite: the universe and human stupidity; and I'm not sure about
+            the universe.
+        </h3>
+        <h3 id="Shown">
+            The important thing is to not stop questioning. Curiosity has its own reason for
+            existing.
+        </h3>
+        <p onClick="activateQuote()">-Albert Einstein</p>
+    </div>
+    <div class="Footer">
+        <h3 onClick="parent.open('https://www.instagram.com/jeremy_cavallo_/')">Instagram</h3>
+        <h3 onClick="parent.open('https://twitter.com/Jeremy_Cavallo')">Twitter</h3>
+        <h3 onClick="parent.open('https://www.linkedin.com/in/jeremy-cavallo/')">LinkedIn</h3>
+        <h3 onClick="parent.open('https://github.com/jjcavallo5')">GitHub</h3>
+    </div>
+</body>
+<footer>
+    <script src="main.js"></script>
+</footer>
+
 </html>

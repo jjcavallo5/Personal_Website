@@ -1,57 +1,49 @@
 * {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("images/adrien-olichon-_GH9LwhlSO4-unsplash.jpg");
+    background-size: cover;
 }
 
 .Contact-Container {
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .Header {
-	font-size: 4rem;
+    font-size: 2rem;
+    color: white;
 }
 
-.Icon-Container {
-	background-color: red;
-	display: flex;
-	flex-direction: column;
-	overflow: wrap;
-	height: 400px;
-	width: 400px;
-	margin-top: 8rem;
+form {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    width: min(90%, 500px);
 }
 
-.Top-Icons,
-.Bottom-Icons {
-	width: 100%;
-	height: 50%;
-	display: flex;
-	flex-direction: row;
+#name,
+#email,
+#message,
+#submit {
+    font-size: 1.5rem;
+    width: 100%;
+    font-family: "times new roman";
+    border: none;
+    background-color: white;
+    padding: 0.2rem;
 }
 
-.Twitter,
-.Email,
-.Instagram,
-.GitHub {
-	height: 200px;
-	width: 200px;
-	position: relative;
-	background-color: transparent;
-	text-align: center;
-	border: 1px solid black;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+form > * {
+    margin-bottom: 1rem;
 }
 
-.Twitter:hover,
-.Email:hover,
-.Instagram:hover,
-.GitHub:hover {
-	cursor: pointer;
+#submit:hover {
+    cursor: pointer;
+    background-color: lightgrey;
 }
-
