@@ -14,6 +14,7 @@
 <body>
     <div class="Top-Gradient"></div>
     <div class="Header">
+        <img src="images/mobile_menu_toggle.png" class="toggle-mobile-menu" onClick="toggleMobileMenu()" />
         <div class="Left-Buttons">
             <button id="Home">Home</button>
             <button id="About" onClick="aboutClicked()">About</button>
@@ -34,7 +35,7 @@
             <button id="Home-Mobile">Home</button>
             <button id="About-Mobile" onClick="aboutClicked()">About</button>
             <button id="Portfolio-Mobile" onClick="portfolioClicked()">Portfolio</button>
-            <button id="Contact-Mobile">Contact</button>
+            <button id="Contact-Mobile" onClick="contactClicked()">Contact</button>
         </div>
         <img src="images/White-Arrow.png" alt="White Arrow" id="Down-Arrow" onClick="arrowClicked()" />
     </div>
@@ -54,7 +55,7 @@
         </div>
         <div class="Contact-Picture">
             <img src="images/ContactPicture.png" alt="A Picture of contact links" />
-            <div class="Contact-Picture-Hover">
+            <div class="Contact-Picture-Hover" onClick="contactClicked()">
                 <h2>Contact Me</h2>
             </div>
         </div>

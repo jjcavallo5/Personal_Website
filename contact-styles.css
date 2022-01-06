@@ -6,6 +6,34 @@
 body {
     background-image: url("images/adrien-olichon-_GH9LwhlSO4-unsplash.jpg");
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Nav-Bar {
+    margin-top: 10px;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.Nav-Bar img {
+    height: 80%;
+    opacity: 0.5;
+    animation: Fade-In-Arrow;
+    animation-duration: 4s;
+}
+
+.Nav-Bar img:hover {
+    cursor: pointer;
+}
+
+.Nav-Bar > * + * {
+    margin-left: 2em;
 }
 
 .Contact-Container {
@@ -15,9 +43,10 @@ body {
     align-items: center;
 }
 
-.Header {
+.Header-contact {
     font-size: 2rem;
     color: white;
+    text-align: center;
 }
 
 form {

@@ -1,173 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>About Me</title>
-        <link rel="stylesheet" href="styles.css" />
-        <link rel="stylesheet" href="about-styles.css" />
-    </head>
-    <body>
-        <div class="Top-Gradient"></div>
-        <div class="Header">
-            <div class="Left-Buttons">
-                <button id="Home" onClick="homeClicked()">Home</button>
-                <button id="About">About</button>
-                <button id="Portfolio" onClick="portfolioClicked()">Portfolio</button>
-                <button id="Contact">Contact</button>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="about-styles.css" />
+</head>
+
+<body>
+    <div class="Top-Gradient"></div>
+    <div class="Header">
+        <div class="Left-Buttons">
+            <button id="Home" onClick="homeClicked()">Home</button>
+            <button id="About">About</button>
+            <button id="Portfolio" onClick="portfolioClicked()">Portfolio</button>
+            <button id="Contact" onClick="contactClicked()">Contact</button>
+        </div>
+        <h1>About Me</h1>
+        <div class="Mobile-Menu">
+            <button id="Home-Mobile" onClick="homeClicked()">Home</button>
+            <button id="About-Mobile">About</button>
+            <button id="Portfolio-Mobile" onClick="portfolioClicked()">Portfolio</button>
+            <button id="Contact-Mobile" onClick="contactClicked()">Contact</button>
+        </div>
+    </div>
+    <div class="Academic-Life">
+        <img src="images/SnrPic.jpg" alt="Picture of me" />
+        <div class="Academic-Life-Text">
+            <h2>Academic Life</h2>
+            <p>
+                I am currently attending Wayne State university and persuing a Bachelors degree
+                in both Biomedical Engineering and Computer Science. I plan to continue my
+                education by getting a Masters degree in one or both of these disciplines.
+                Despite the large work-load, I have managed to maintain a 3.95 GPA throughout my
+                two years in college. I have taken courses that relate to the design and
+                analysis of algorithms, Computer architecture, basic programming concepts, and
+                ethics in computer science. I have also taken Biomedical Engineering design
+                labs, in which we learned and applied the engineering design process, as well as
+                classes on Computer-Aided Design and 3D modeling.
+            </p>
+        </div>
+    </div>
+    <div class="Tech-Skills">
+        <div class="Tech-Container">
+            <div class="Left-Images">
+                <img src="images/CPP_Logo.png" alt="CPP logo" />
+                <img src="images/Java_Logo.png" alt="Java logo" />
             </div>
-            <h1>About Me</h1>
-            <div class="Mobile-Menu">
-                <button id="Home-Mobile" onClick="homeClicked()">Home</button>
-                <button id="About-Mobile">About</button>
-                <button id="Portfolio-Mobile" onClick="portfolioClicked()">Portfolio</button>
-                <button id="Contact-Mobile">Contact</button>
+            <div class="Tech-Skills-Text">
+                <h2>Technical Skills</h2>
+                <p>
+                    Through my studies at Wayne State and personal research, I have acquired the
+                    following skills:
+                </p>
+                <ul>
+                    <li>AutoCAD</li>
+                    <li>C/C++</li>
+                    <li>CSS</li>
+                    <li>HTML</li>
+                    <li>Java & JavaScript</li>
+                    <li>MATLAB</li>
+                    <li>Microsoft Excel</li>
+                    <li>NX12</li>
+                </ul>
+            </div>
+            <div class="Right-Images">
+                <img src="images/HTML_Logo.png" alt="HTML, CSS, JavaScript logos" />
+                <img src="images/Matlab_Logo.jpg" alt="Matlab Logo" />
             </div>
         </div>
-        <div class="Academic-Life">
-            <img src="images/SnrPic.jpg" alt="Picture of me" />
-            <div class="Academic-Life-Text">
-                <h2>Academic Life</h2>
+    </div>
+    <div class="Work-Athlete-Wrapper">
+        <div class="Work-Experience">
+            <div class="Work-Experience-Header">
+                <h2>Work Experience</h2>
+            </div>
+            <div class="Work-Experience-Text">
+                <div class="Daycamp">
+                    <h3>Daycamp Counselor</h3>
+                    <p>
+                        Going into my freshman year of college, I worked as a daycamp counselor
+                        where I oversaw a group of 8-10 kids in grades K-2. I was in charge of
+                        leading games and activities for the kids and had to come up with
+                        creative ways to keep them entertained for the entire day.
+                    </p>
+                </div>
+                <img src="images/Daycamp_Picture.jpg" alt="Pie to the face!" />
+                <div class="Freelancer">
+                    <h3>Freelancer</h3>
+                    <p>
+                        During my sophomore year, I struggled to find work due to the pandemic.
+                        I decided to do programming freelance work through Fiverr.com. While on
+                        the site, I sharpened my C and C++ coding skills by writing efficient
+                        code for my customers within the given deadline. I also learned skills
+                        relating to dealing with online customers and setting my own prices for
+                        specific projects based on estimated workload.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="Athletic-Experience">
+            <img src="images/TheSquad.jpg" alt="The squad!" />
+            <div class="Athletic-Experience-Text">
+                <h2>Collegiate Athletic Experience</h2>
                 <p>
-                    I am currently attending Wayne State university and persuing a Bachelors degree
-                    in both Biomedical Engineering and Computer Science. I plan to continue my
-                    education by getting a Masters degree in one or both of these disciplines.
-                    Despite the large work-load, I have managed to maintain a 3.95 GPA throughout my
-                    two years in college. I have taken courses that relate to the design and
-                    analysis of algorithms, Computer architecture, basic programming concepts, and
-                    ethics in computer science. I have also taken Biomedical Engineering design
-                    labs, in which we learned and applied the engineering design process, as well as
-                    classes on Computer-Aided Design and 3D modeling.
+                    On top of persuing two degrees, I am also a college athlete on the Wayne
+                    State Cross Country team. I am expected to devote up to 20 hours a week to
+                    practices, possibly more that that when we travel to races. Being a athlete
+                    has not only taught me how to manage my time, but it has provided
+                    experiences in leadership and teamwork.
                 </p>
             </div>
         </div>
-        <div class="Tech-Skills">
-            <div class="Tech-Container">
-                <div class="Left-Images">
-                    <img src="images/CPP_Logo.png" alt="CPP logo" />
-                    <img src="images/Java_Logo.png" alt="Java logo" />
-                </div>
-                <div class="Tech-Skills-Text">
-                    <h2>Technical Skills</h2>
+    </div>
+    <div class="Honors">
+        <h2>Honors, Awards, and Activities</h2>
+        <div class="Honors-Container">
+            <div class="NHS">
+                <div class="NHS-Text">
+                    <h3>National Honors Society</h3>
                     <p>
-                        Through my studies at Wayne State and personal research, I have acquired the
-                        following skills:
+                        In my last two years of High School, I was a part of the National Honors
+                        Society. With this group, I volunteered quite a few times. A few
+                        specific examples include:
                     </p>
                     <ul>
-                        <li>AutoCAD</li>
-                        <li>C/C++</li>
-                        <li>CSS</li>
-                        <li>HTML</li>
-                        <li>Java & JavaScript</li>
-                        <li>MATLAB</li>
-                        <li>Microsoft Excel</li>
-                        <li>NX12</li>
+                        <li>Clarkston State Bank Backroads Half Marathon - 2017 & 2018</li>
+                        <li>Elementary School Fair - 2019</li>
+                        <li>Gleaners Food Bank - 2018</li>
                     </ul>
                 </div>
-                <div class="Right-Images">
-                    <img src="images/HTML_Logo.png" alt="HTML, CSS, JavaScript logos" />
-                    <img src="images/Matlab_Logo.jpg" alt="Matlab Logo" />
-                </div>
+                <img src="images/NHS_Logo.jpg" alt="NHS logo" />
             </div>
-        </div>
-        <div class="Work-Athlete-Wrapper">
-            <div class="Work-Experience">
-                <div class="Work-Experience-Header">
-                    <h2>Work Experience</h2>
-                </div>
-                <div class="Work-Experience-Text">
-                    <div class="Daycamp">
-                        <h3>Daycamp Counselor</h3>
-                        <p>
-                            Going into my freshman year of college, I worked as a daycamp counselor
-                            where I oversaw a group of 8-10 kids in grades K-2. I was in charge of
-                            leading games and activities for the kids and had to come up with
-                            creative ways to keep them entertained for the entire day.
-                        </p>
-                    </div>
-                    <img src="images/Daycamp_Picture.jpg" alt="Pie to the face!" />
-                    <div class="Freelancer">
-                        <h3>Freelancer</h3>
-                        <p>
-                            During my sophomore year, I struggled to find work due to the pandemic.
-                            I decided to do programming freelance work through Fiverr.com. While on
-                            the site, I sharpened my C and C++ coding skills by writing efficient
-                            code for my customers within the given deadline. I also learned skills
-                            relating to dealing with online customers and setting my own prices for
-                            specific projects based on estimated workload.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="Athletic-Experience">
-                <img src="images/TheSquad.jpg" alt="The squad!" />
-                <div class="Athletic-Experience-Text">
-                    <h2>Collegiate Athletic Experience</h2>
+            <div class="Other-Volunteering">
+                <img src="images/Freep_Logo.png" alt="Free Press Marathon logo" />
+                <div class="Other-Volunteering-Text">
+                    <h3>Other Volunteering Experiences</h3>
                     <p>
-                        On top of persuing two degrees, I am also a college athlete on the Wayne
-                        State Cross Country team. I am expected to devote up to 20 hours a week to
-                        practices, possibly more that that when we travel to races. Being a athlete
-                        has not only taught me how to manage my time, but it has provided
-                        experiences in leadership and teamwork.
+                        My volunteering experiences didn't end after I graduated High School! At
+                        Wayne State, the athletic department encourages their athletes to
+                        volunteer regularly. I have had the opportunity to volunteer at the
+                        following events:
+                    </p>
+                    <ul>
+                        <li>Cass Community Services - August 2019</li>
+                        <li>Belle Isle Triathalon - September 2019</li>
+                        <li>Detroit Free-Press Marathon - October 2019</li>
+                        <li>Wayne State Campus Cleanup - March 2021</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="Awards">
+                <div class="Awards-Text">
+                    <h3>Awards</h3>
+                    <p>
+                        I recieved the Captains award for Clarkston Cross Country during my
+                        senior season, and was elected as a captain during both my Junior and
+                        Senior seasons. This meant that I was the main source of communication
+                        between the coach and the rest of the team, and I was expected to
+                        inspire the younger athletes and ensure they enjoyed the sport.
                     </p>
                 </div>
+                <img src="images/Captain_Trophy.jpg" alt="Trophy" />
             </div>
         </div>
-        <div class="Honors">
-            <h2>Honors, Awards, and Activities</h2>
-            <div class="Honors-Container">
-                <div class="NHS">
-                    <div class="NHS-Text">
-                        <h3>National Honors Society</h3>
-                        <p>
-                            In my last two years of High School, I was a part of the National Honors
-                            Society. With this group, I volunteered quite a few times. A few
-                            specific examples include:
-                        </p>
-                        <ul>
-                            <li>Clarkston State Bank Backroads Half Marathon - 2017 & 2018</li>
-                            <li>Elementary School Fair - 2019</li>
-                            <li>Gleaners Food Bank - 2018</li>
-                        </ul>
-                    </div>
-                    <img src="images/NHS_Logo.jpg" alt="NHS logo" />
-                </div>
-                <div class="Other-Volunteering">
-                    <img src="images/Freep_Logo.png" alt="Free Press Marathon logo" />
-                    <div class="Other-Volunteering-Text">
-                        <h3>Other Volunteering Experiences</h3>
-                        <p>
-                            My volunteering experiences didn't end after I graduated High School! At
-                            Wayne State, the athletic department encourages their athletes to
-                            volunteer regularly. I have had the opportunity to volunteer at the
-                            following events:
-                        </p>
-                        <ul>
-                            <li>Cass Community Services - August 2019</li>
-                            <li>Belle Isle Triathalon - September 2019</li>
-                            <li>Detroit Free-Press Marathon - October 2019</li>
-                            <li>Wayne State Campus Cleanup - March 2021</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="Awards">
-                    <div class="Awards-Text">
-                        <h3>Awards</h3>
-                        <p>
-                            I recieved the Captains award for Clarkston Cross Country during my
-                            senior season, and was elected as a captain during both my Junior and
-                            Senior seasons. This meant that I was the main source of communication
-                            between the coach and the rest of the team, and I was expected to
-                            inspire the younger athletes and ensure they enjoyed the sport.
-                        </p>
-                    </div>
-                    <img src="images/Captain_Trophy.jpg" alt="Trophy" />
-                </div>
-            </div>
-        </div>
-    </body>
-    <footer>
-        <script src="main.js"></script>
-    </footer>
+    </div>
+</body>
+<footer>
+    <script src="main.js"></script>
+</footer>
+
 </html>

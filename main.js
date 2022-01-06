@@ -1,3 +1,14 @@
+document.body.classList.add("js-loading");
+
+window.addEventListener("load", showPage);
+
+function showPage() {
+    console.log("loaded");
+    document.body.classList.remove("js-loading");
+    document.querySelector(".Header").style.backgroundImage =
+        "url(images/peter-gargiulo-cGNCepznaV8-unsplash.jpg)";
+}
+
 function homeClicked() {
     location.href = "index.html";
 }
@@ -12,6 +23,10 @@ function portfolioClicked() {
 
 function contactClicked() {
     location.href = "contact.html";
+}
+
+function toggleMobileMenu() {
+    document.querySelector(".Mobile-Menu").classList.toggle("active");
 }
 
 function arrowClicked() {

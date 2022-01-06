@@ -17,19 +17,44 @@ body {
     justify-content: center;
 }
 
+.toggle-mobile-menu {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 40px;
+    width: 40px;
+    opacity: 60%;
+}
+
 .Mobile-Menu {
     display: none;
     flex-direction: column;
-    background-color: blue;
+    background-color: transparent;
     width: 40%;
     position: absolute;
-    top: 0;
+    top: 55px;
+    left: 10px;
+    opacity: 60%;
+}
+
+.active {
+    display: flex;
 }
 
 .Mobile-Menu button {
-    background-color: blue;
+    background-color: white;
     border: none;
     padding: 0.5rem;
+    font-family: "times new roman";
+}
+
+#Home-Mobile {
+    border-top-right-radius: 10px;
+}
+
+#Contact-Mobile {
+    border-bottom-left-radius: 10px;
 }
 
 .Top-Gradient {
@@ -42,7 +67,7 @@ body {
     text-align: center;
     height: 95vh;
     width: 100%;
-    background-image: url("images/peter-gargiulo-cGNCepznaV8-unsplash.jpg");
+    background-color: black;
     background-size: cover;
     color: #145da0;
     display: flex;
@@ -77,14 +102,14 @@ body {
 #C {
     position: relative;
     font-family: "Magneto";
-    font-size: 10rem;
+    font-size: 8rem;
 }
 
 #eremy,
 #avallo {
     position: relative;
     font-family: "Magneto";
-    font-size: 5rem;
+    font-size: 3rem;
 }
 
 #J {
@@ -162,12 +187,12 @@ body {
 }
 
 .Quote {
-    width: 90%;
-    height: 400px;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    width: 100%;
+    height: 300px;
+    padding: 2rem 0 2rem 0;
     overflow: hidden;
     position: relative;
+    background-color: #b1d4e0;
 }
 
 #Shown,
@@ -175,6 +200,7 @@ body {
     font-family: "Segoe Script";
     padding-bottom: 0.5rem;
     padding-left: 0.3rem;
+    width: min(80%, 500px);
 }
 
 #Hidden {
@@ -198,7 +224,9 @@ body {
     font-family: "Vladimir Script";
     font-size: 1.6rem;
     position: absolute;
-    bottom: -15px;
+    bottom: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .Footer {
@@ -229,6 +257,24 @@ body {
         flex-direction: row;
     }
 
+    .toggle-mobile-menu {
+        display: none;
+    }
+
+    #J,
+    #C {
+        position: relative;
+        font-family: "Magneto";
+        font-size: 10rem;
+    }
+
+    #eremy,
+    #avallo {
+        position: relative;
+        font-family: "Magneto";
+        font-size: 6rem;
+    }
+
     .About-Picture,
     .Projects-Picture,
     .Contact-Picture {
@@ -251,6 +297,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+        text-align: center;
     }
 
     .About-Picture-Hover:hover,
@@ -321,6 +368,7 @@ body {
         align-items: center;
         width: 100%;
         background-color: #b1d4e0;
+        height: 400px;
     }
 
     .Quote h3 {
@@ -331,7 +379,7 @@ body {
 
     .Quote p {
         font-size: 1.8rem;
-        margin-bottom: 4rem;
+        bottom: 2rem;
     }
 
     .Footer {
@@ -343,6 +391,11 @@ body {
         animation: Rotate;
         animation-duration: 2s;
     }
+}
+.js-loading *,
+.js-loading *::after,
+.js-loading *::before {
+    animation-play-state: paused;
 }
 
 @keyframes Fade-In {
