@@ -104,6 +104,7 @@ html {
 
 .description p {
     font-size: 20px;
+    margin-bottom: 1rem;
 }
 
 .skills-carousel {
@@ -481,10 +482,10 @@ html {
 
 .cover {
     position: absolute;
-    left: -50%;
+    left: -150%;
     background-color: #15131d;
-    height: 110%;
-    width: 60%;
+    height: 130%;
+    width: 160%;
     z-index: 3;
 }
 
