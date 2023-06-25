@@ -1,49 +1,152 @@
-function skillsLeftClicked() {
-    document.querySelector(".primary").classList.add("p2l");
-    document.querySelector(".back").classList.add("b2r");
-    document.querySelector(".left").classList.add("l2b");
-    document.querySelector(".right").classList.add("r2p");
+/*
 
-    document
-        .querySelector(".primary")
-        .addEventListener("animationend", function () {
-            console.log("function called");
+Main JavaScript file for jeremycavallo.com
 
-            document.querySelector(".p2l").classList.add("left");
-            document.querySelector(".p2l").classList.remove("primary", "p2l");
+Author: Jeremy Cavallo
 
-            document.querySelector(".b2r").classList.add("right");
-            document.querySelector(".b2r").classList.remove("back", "b2r");
+Copyright 2023
 
-            document.querySelector(".l2b").classList.add("back");
-            document.querySelector(".l2b").classList.remove("left", "l2b");
+*/
 
-            document.querySelector(".r2p").classList.add("primary");
-            document.querySelector(".r2p").classList.remove("right", "r2p");
-        });
+
+getIconsAndTabs = () => {
+    /*
+    Returns list of icons and tabs
+
+    Args:
+        None
+    
+    Returns:
+        [sidebarIcons, tabs] - lists of sidebar icons and tabs
+    */
+
+    let sidebarIcons = document.querySelectorAll('.sidebar-icon')
+    let tabs = document.querySelectorAll('.tab')
+
+    return [sidebarIcons, tabs]
 }
 
-function skillsRightClicked() {
-    document.querySelector(".primary").classList.add("p2r");
-    document.querySelector(".back").classList.add("b2l");
-    document.querySelector(".left").classList.add("l2p");
-    document.querySelector(".right").classList.add("r2b");
+clearActive = (sidebarIcons, tabs) => {
+    /*
+    Clears the active state of all icons and tabs
 
-    document
-        .querySelector(".primary")
-        .addEventListener("animationend", function () {
-            console.log("function called");
+    Args:
+        None
+    
+    Returns:
+        None
 
-            document.querySelector(".p2r").classList.add("right");
-            document.querySelector(".p2r").classList.remove("primary", "p2r");
+    */
+    sidebarIcons.forEach((icon, i) => {
+        icon.classList.remove('sidebar-icon-active')
+    })
+    tabs.forEach((tab, i) => {
+        tab.classList.remove('tab-active')
+    })
+}
 
-            document.querySelector(".b2l").classList.add("left");
-            document.querySelector(".b2l").classList.remove("back", "b2l");
+homeClicked = () => {
+    /*
+    Handles selection of home page
 
-            document.querySelector(".l2p").classList.add("primary");
-            document.querySelector(".l2p").classList.remove("left", "l2p");
+    Args:
+        None
+    
+    Returns:
+        None
+    */
 
-            document.querySelector(".r2b").classList.add("back");
-            document.querySelector(".r2b").classList.remove("right", "r2b");
-        });
+    let [sidebarIcons, tabs] = getIconsAndTabs()
+    clearActive(sidebarIcons, tabs)
+
+    sidebarIcons[0].classList.add('sidebar-icon-active')
+    tabs[0].classList.add('tab-active')
+}
+
+aboutClicked = () => {
+    /*
+    Handles selection of about page
+
+    Args:
+        None
+    
+    Returns:
+        None
+    */
+
+    let [sidebarIcons, tabs] = getIconsAndTabs()
+    clearActive(sidebarIcons, tabs)
+
+    sidebarIcons[4].classList.add('sidebar-icon-active')
+    tabs[1].classList.add('tab-active')
+}
+
+contactClicked = () => {
+    /*
+    Handles selection of contact page
+
+    Args:
+        None
+    
+    Returns:
+        None
+    */
+
+    let [sidebarIcons, tabs] = getIconsAndTabs()
+    clearActive(sidebarIcons, tabs)
+
+    sidebarIcons[3].classList.add('sidebar-icon-active')
+    tabs[3].classList.add('tab-active')
+}
+
+projectsClicked = () => {
+    /*
+    Handles selection of projects page
+
+    Args:
+        None
+    
+    Returns:
+        None
+    */
+
+    let [sidebarIcons, tabs] = getIconsAndTabs()
+    clearActive(sidebarIcons, tabs)
+
+    sidebarIcons[2].classList.add('sidebar-icon-active')
+    tabs[2].classList.add('tab-active')
+}
+
+githubClicked = () => {
+    /*
+    Handles selection of github page
+
+    Args:
+        None
+    
+    Returns:
+        None
+    */
+
+    let [sidebarIcons, tabs] = getIconsAndTabs()
+    clearActive(sidebarIcons, tabs)
+
+    sidebarIcons[1].classList.add('sidebar-icon-active')
+}
+
+settingsClicked = () => {
+    /*
+    Handles selection of settings page
+
+    Args:
+        None
+    
+    Returns:
+        None
+    */
+
+    let [sidebarIcons, tabs] = getIconsAndTabs()
+    clearActive(sidebarIcons, tabs)
+
+    sidebarIcons[5].classList.add('sidebar-icon-active')
 }
