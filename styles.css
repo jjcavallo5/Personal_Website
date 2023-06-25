@@ -6,13 +6,16 @@
 :root {
     --dark: #1e1f29;
     --med: #21222c;
+    --sidebar_hover: #3c3d51;
     --light: #282a36;
+    --text: #efefef;
 }
 
 body {
     width: 100%;
     height: 100%;
     position: absolute;
+    overflow: hidden;
 }
 
 .file-header {
@@ -22,6 +25,38 @@ body {
     width: 100%;
     height: 30px;
     background-color: var(--dark);
+    padding-left: 10px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.file-selection {
+    color: #fff;
+    font-family: Source Sans Pro,sans-serif;
+    font-size: 14px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 10px
+}
+
+.file-selection:hover {
+    cursor: pointer;
+}
+
+.jeremy-cavallo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: Source Sans Pro,sans-serif;
+    font-size: 14px;
+    color: #fff;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
 }
 
 .main-body {
@@ -31,6 +66,78 @@ body {
     position: absolute;
     top: 30px;
     left: 0;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.left-nav-bar {
+    height: 100%;
+    width: 70px;
+    position: relative;
+}
+
+.upper-side-bar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lower-side-bar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sidebar-icon {
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar-icon:hover {
+    cursor: pointer;
+    background-color: var(--sidebar_hover);
+}
+
+.file-explorer {
+    height: 100%;
+    width: 240px;
+    background-color: var(--med);
+}
+
+.explorer-text {
+    color: #fff;
+    font-family: Source Sans Pro,sans-serif;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.portfolio-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: var(--text);
+    font-family: Source Sans Pro,sans-serif;
+    font-weight:700;
+    font-size: 12px
+}
+
+.portfolio-toggle:hover {
+    cursor: pointer;
 }
 
 .footer {
@@ -40,4 +147,33 @@ body {
     width: 100%;
     height: 30px;
     background-color: var(--dark);
+
+    display: flex;
+    align-items: center;
+}
+
+.footer-git-branch {
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    font-family: Source Sans Pro,sans-serif;
+    font-size: 12px;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+.footer-errors {
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    font-family: Source Sans Pro,sans-serif;
+    font-size: 12px;
+
+    margin-left: 10px;
+    padding: 5px;
+}
+
+.footer-errors:hover, .footer-git-branch:hover {
+    cursor: pointer;
+    background-color: var(--sidebar_hover);
 }
