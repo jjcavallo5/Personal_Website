@@ -10,6 +10,7 @@
     --sidebar_hover: #3c3d51;
     --light: #282a36;
     --text: #efefef;
+    --text_alpha: #efefef99;
 }
 
 body {
@@ -190,6 +191,8 @@ body {
 .tab {
     padding-left: 5px;
     padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -246,4 +249,35 @@ body {
 .footer-errors:hover, .footer-git-branch:hover {
     cursor: pointer;
     background-color: var(--sidebar_hover);
+}
+
+@media screen and (max-width: 830px) {
+    .file-explorer {
+        display: none;
+    }
+
+    .code-area {
+        width: calc(100% - 50px);
+        height: 100%;
+        position: absolute;
+        right: 0;
+    
+        display: flex;
+        flex-direction: column;
+    }
+
+    .file-selection {
+        display: none;
+    }
+
+    .top-tab-nav {
+        overflow-x: auto;
+        height: 35px;
+    }
+
+    .left-nav-bar {
+        height: 100%;
+        width: 40px;
+        position: relative;
+    }
 }

@@ -1,13 +1,14 @@
 
 .body-page {
     display: none;
+    height: calc(100% - 35px);
 }
+
 .body-active {
     display: flex;
 }
 
 .home-body {
-    height: 100%;
     width: 100%;
     position: relative;
 
@@ -21,7 +22,8 @@
 
 .home-body h1{
     font-size: 48px;
-    margin-bottom: 30px
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .left,
@@ -133,3 +135,82 @@
 .line-content {
     color: var(--text);
 }
+
+.about-body {
+    flex-direction: column;
+    padding: 2rem;
+    color: var(--text);
+    overflow-y: auto;
+}
+
+#jeremy-cavallo {
+    padding: 1rem 0 1rem 0;
+    border-bottom:1px solid var(--text_alpha);
+    margin-bottom: 2rem;
+}
+
+.about-body h2 {
+    padding: 1rem 0 1rem 0;
+    border-bottom: 1px solid var(--text_alpha);
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.about-body ul {
+    margin-left: 2rem;
+    line-height: 1.5rem;
+}
+
+.about-body li {
+    margin-bottom: 0.2rem;
+}
+
+@media screen and (max-width: 1100px) {
+    .home-body {
+        flex-direction: column;
+        align-items: center;
+        overflow-y: auto;
+    }
+
+    .main-text {
+        text-align: center;
+    }
+
+    .left,
+    .right {
+        align-items: center;
+    }
+
+    .skills-container {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .image-container {
+        margin-top: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 1470px) {
+    .image {
+        height: 250px;
+        width: 250px;
+        padding: 0;
+        overflow: hidden;
+        object-fit: cover;
+        object-position: 0% 0%;
+        border-radius: 50%;
+    
+        border: 10px solid purple;
+    }
+
+}
+
+@media screen and (max-width: 830px) {
+    .code-line {
+        font-size: 1rem;
+    }
+
+}
+
