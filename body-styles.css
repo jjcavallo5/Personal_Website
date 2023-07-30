@@ -1,0 +1,25 @@
+
+.body-page {
+    display: none;
+}
+.body-active {
+    display: flex;
+}
+
+.home-body {
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    flex-direction: column;
+    justify-content: center;
+
+    color: var(--text);
+    font-family: JetBrains Mono,monospace;
+    padding-left: 50px;
+}
+
+.home-body h1{
+    font-size: 48px;
+    margin-bottom: 30px
+}

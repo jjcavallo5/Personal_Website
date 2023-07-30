@@ -9,7 +9,7 @@ Copyright 2023
 */
 
 
-getIconsAndTabs = () => {
+getIconsTabsAndPages = () => {
     /*
     Returns list of icons and tabs
 
@@ -22,11 +22,12 @@ getIconsAndTabs = () => {
 
     let sidebarIcons = document.querySelectorAll('.sidebar-icon')
     let tabs = document.querySelectorAll('.tab')
+    let pages = document.querySelectorAll('.body-page')
 
-    return [sidebarIcons, tabs]
+    return [sidebarIcons, tabs, pages]
 }
 
-clearActive = (sidebarIcons, tabs) => {
+clearActive = (sidebarIcons, tabs, pages) => {
     /*
     Clears the active state of all icons and tabs
 
@@ -43,6 +44,9 @@ clearActive = (sidebarIcons, tabs) => {
     tabs.forEach((tab, i) => {
         tab.classList.remove('tab-active')
     })
+    pages.forEach((page, i) => {
+        page.classList.remove('body-active')
+    })
 }
 
 homeClicked = () => {
@@ -56,11 +60,12 @@ homeClicked = () => {
         None
     */
 
-    let [sidebarIcons, tabs] = getIconsAndTabs()
-    clearActive(sidebarIcons, tabs)
+    let [sidebarIcons, tabs, pages] = getIconsTabsAndPages()
+    clearActive(sidebarIcons, tabs, pages)
 
     sidebarIcons[0].classList.add('sidebar-icon-active')
     tabs[0].classList.add('tab-active')
+    pages[0].classList.add('body-active')
 }
 
 aboutClicked = () => {
@@ -74,11 +79,13 @@ aboutClicked = () => {
         None
     */
 
-    let [sidebarIcons, tabs] = getIconsAndTabs()
-    clearActive(sidebarIcons, tabs)
+    let [sidebarIcons, tabs, pages] = getIconsTabsAndPages()
+    clearActive(sidebarIcons, tabs, pages)
 
     sidebarIcons[4].classList.add('sidebar-icon-active')
     tabs[1].classList.add('tab-active')
+    pages[1].classList.add('body-active')
+
 }
 
 contactClicked = () => {
@@ -92,11 +99,12 @@ contactClicked = () => {
         None
     */
 
-    let [sidebarIcons, tabs] = getIconsAndTabs()
-    clearActive(sidebarIcons, tabs)
+    let [sidebarIcons, tabs, pages] = getIconsTabsAndPages()
+    clearActive(sidebarIcons, tabs, pages)
 
     sidebarIcons[3].classList.add('sidebar-icon-active')
     tabs[3].classList.add('tab-active')
+    pages[3].classList.add('body-active')
 }
 
 projectsClicked = () => {
@@ -110,11 +118,13 @@ projectsClicked = () => {
         None
     */
 
-    let [sidebarIcons, tabs] = getIconsAndTabs()
-    clearActive(sidebarIcons, tabs)
+    let [sidebarIcons, tabs, pages] = getIconsTabsAndPages()
+    clearActive(sidebarIcons, tabs, pages)
 
     sidebarIcons[2].classList.add('sidebar-icon-active')
     tabs[2].classList.add('tab-active')
+    pages[2].classList.add('body-active')
+
 }
 
 githubClicked = () => {
@@ -128,10 +138,12 @@ githubClicked = () => {
         None
     */
 
-    let [sidebarIcons, tabs] = getIconsAndTabs()
-    clearActive(sidebarIcons, tabs)
+    let [sidebarIcons, tabs, pages] = getIconsTabsAndPages()
+    clearActive(sidebarIcons, tabs, pages)
 
     sidebarIcons[1].classList.add('sidebar-icon-active')
+    pages[4].classList.add('body-active')
+
 }
 
 settingsClicked = () => {
@@ -145,8 +157,10 @@ settingsClicked = () => {
         None
     */
 
-    let [sidebarIcons, tabs] = getIconsAndTabs()
-    clearActive(sidebarIcons, tabs)
+    let [sidebarIcons, tabs, pages] = getIconsTabsAndPages()
+    clearActive(sidebarIcons, tabs, pages)
 
     sidebarIcons[5].classList.add('sidebar-icon-active')
+    pages[5].classList.add('body-active')
+
 }
