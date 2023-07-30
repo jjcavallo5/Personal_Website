@@ -31,6 +31,61 @@
     width: 50%
 }
 
+.skills-header {
+    margin-bottom: 1rem;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+.skill {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    width: fit-content;
+
+    font-size: 0.8rem;
+    border-radius: 2rem;
+    margin: 0.2rem;
+}
+.skill:hover {
+    cursor: pointer;
+}
+
+.Python:hover {
+    background-color: #ff000077
+}
+.PyTorch:hover {
+    background-color: #ffa50077; 
+}
+.React:hover {
+    background-color: #ffff0077; 
+}
+.HTML:hover {
+    background-color: #00ff0077; 
+}
+.JavaScript:hover {
+    background-color: #0000ff77; 
+}
+.CSS:hover{
+    background-color: #ee82ee77; 
+}
+.C:hover {
+    background-color: #87ceeb77; 
+}
+.Machine:hover {
+    background-color: #80008077; 
+}
+.AI:hover {
+    background-color: #00fff277; 
+}
+
 .image {
     height: 500px;
     width: 500px;

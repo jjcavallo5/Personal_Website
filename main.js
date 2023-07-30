@@ -8,7 +8,6 @@ Copyright 2023
 
 */
 
-
 getIconsTabsAndPages = () => {
     /*
     Returns list of icons and tabs
