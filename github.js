@@ -114,9 +114,14 @@ displayGithubRecentActivity = (activity) => {
 
     for (let i = 0; i < events.length; i++) {
         if (events[i]["type"] == "PushEvent") {
-            if (!Object.keys(repositories).includes(events[i]["repo"]["name"]))
-                repositories[events[i]["repo"]["name"]] = 1;
-            else repositories[events[i]["repo"]["name"]]++;
+            if (events[i]["public"]) {
+                if (!Object.keys(repositories).includes(events[i]["repo"]["name"]))
+                    repositories[events[i]["repo"]["name"]] = 1;
+                else repositories[events[i]["repo"]["name"]]++;
+            } else {
+                if (!Object.keys(repositories).includes("private")) repositories["private"] = 1;
+                else repositories["private"]++;
+            }
         }
     }
 
@@ -129,13 +134,21 @@ displayGithubRecentActivity = (activity) => {
         Object.keys(repositories).length == 1 ? "y" : "ies"
     }`;
     for (let i = 0; i < Object.keys(repositories).length; i++) {
-        pushEventsBlock.innerHTML += `<span class='github-push-event'>
-        <a href=https://github.com/${
-            Object.keys(repositories)[i]
-        } id='github-repo-link' target='_blank'>${Object.keys(repositories)[i]}</a> <p>${
-            repositories[Object.keys(repositories)[i]]
-        } commits</p>
-        </span>`;
+        if (Object.keys(repositories)[i] != "private") {
+            pushEventsBlock.innerHTML += `<span class='github-push-event'>
+          <a href=https://github.com/${
+              Object.keys(repositories)[i]
+          } id='github-repo-link' target='_blank'>${Object.keys(repositories)[i]}</a> <p>${
+                repositories[Object.keys(repositories)[i]]
+            } commits</p>
+          </span>`;
+        } else {
+            pushEventsBlock.innerHTML += `<span class='github-push-event'>
+            <p>${repositories[Object.keys(repositories)[i]]} commit${
+                repositories[Object.keys(repositories)[i]] == 1 ? "" : "s"
+            } in private repositories</p>
+          </span>`;
+        }
     }
 
     container.appendChild(pushEventsBlock);
