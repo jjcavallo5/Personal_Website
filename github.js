@@ -53,8 +53,11 @@ const generateGithubContributionGraph = (contributions_json) => {
             if (contributionNumber > maxDailyContribution * 0.75) color = COLORS[3]
             let block = document.createElement('div')
             let tooltip = document.createElement('p')
+            block.classList.add('github-day-block')
+            tooltip.classList.add('github-tooltip')
             tooltip.innerHTML = `${contributionNumber} contribution${contributionNumber == 1 ? '' : 's'} on ${contributionDate.toLocaleDateString('en-us', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}`
-            console.log(tooltip.innerHTML)
+            // tooltip.style = 'display: none';
+            block.appendChild(tooltip)
             block.style = `height: 10px; width: 10px; background-color: ${color}; margin: 2px;`
             container.appendChild(block)
             console.log("Block added")
