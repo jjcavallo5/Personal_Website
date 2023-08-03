@@ -9,9 +9,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="body-styles.css" />
+    <script type="module">
+      import { Octokit, App } from "https://esm.sh/octokit";
+
+      window.getGithubRecentActivity = async () => {
+          const octokit = new Octokit({
+              auth: TOKEN
+            })
+            
+            let response = await octokit.request('GET /users/{username}/events', {
+              username: 'jjcavallo5',
+              headers: {
+                'X-GitHub-Api-Version': '2022-11-28'
+              }
+            })
+
+          displayGithubRecentActivity(response)
+      }
+    </script>
     <script src="main.js"></script>
     <script src="config.js"></script>
     <script src="github.js"></script>
+    
     <title>Jeremy Cavallo</title>
   </head>
   <body onload="getGithubContributions()">
@@ -458,7 +477,7 @@
         <div class="body-page github-body">
           <h1 class="skills-list">GitHub</h1>
           <div style="display: flex; flex-direction: row; gap: 0.5rem">
-            <h2>Take a look at my GitHub contributions!</h2>
+            <h2 onclick="getGithubRecentActivity()">Take a look at my GitHub contributions!</h2>
           </div>
           
           <div class="github-content-wrapper">

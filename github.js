@@ -1,4 +1,4 @@
-// import TOKEN from "./config";
+
 
 // GraphQL Query:
 
@@ -71,7 +71,6 @@ const generateGithubContributionGraph = (contributions_json) => {
         for (let j = 0; j < contributions[i]['contributionDays'].length; j++) {
             let contributionNumber = contributions[i]['contributionDays'][j]['contributionCount']
             let contributionDate = new Date(contributions[i]['contributionDays'][j]['date'])
-            // console.log(contributions[i]['contributionDays'][j]['date'])
             let color = '#2d333b'
             if (contributionNumber > 0) color = COLORS[0]
             if (contributionNumber > maxDailyContribution / 4) color = COLORS[1]
@@ -82,7 +81,6 @@ const generateGithubContributionGraph = (contributions_json) => {
             block.classList.add('github-day-block')
             tooltip.classList.add('github-tooltip')
             tooltip.innerHTML = `${contributionNumber} contribution${contributionNumber == 1 ? '' : 's'} on ${DAYS[contributionDate.getUTCDay()]}, ${MONTHS[contributionDate.getUTCMonth()]} ${contributionDate.getUTCDate()}, ${contributionDate.getUTCFullYear()}`
-            // tooltip.style = 'display: none';
             block.appendChild(tooltip)
             block.style = `height: 10px; width: 10px; background-color: ${color}; margin: 2px;`
             container.appendChild(block)
@@ -90,7 +88,6 @@ const generateGithubContributionGraph = (contributions_json) => {
         }
     }
 }
-
 
 getGithubContributions = async () => {
     let response = await fetch('https://api.github.com/graphql', {
@@ -106,6 +103,6 @@ getGithubContributions = async () => {
     generateGithubContributionGraph(json)
 }
 
-testThisFile = () => {
-    console.log('test')
+displayGithubRecentActivity = (activity) => {
+    console.log(activity)
 }
