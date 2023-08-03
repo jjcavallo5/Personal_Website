@@ -189,6 +189,14 @@
     gap: 2rem   
 }
 
+.github-graph-container {
+    height: 100px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
 @media screen and (max-width: 1100px) {
     .home-body {
         flex-direction: column;
