@@ -189,6 +189,15 @@
     gap: 2rem   
 }
 
+.github-body {
+    flex-direction: column;
+    align-items: center;
+}
+
+#total-contributions {
+    font-size: 0.8rem;
+}
+
 .github-graph-container {
     height: 100px;
     width: 800px;

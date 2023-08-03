@@ -14,7 +14,7 @@
     <script src="github.js"></script>
     <title>Jeremy Cavallo</title>
   </head>
-  <body>
+  <body onload="getGithubContributions()">
     <div class="file-header">
       <div class="file-selection"><span>File</span></div>
       <div class="file-selection"><span>Edit</span></div>
@@ -456,17 +456,15 @@
         </div>
 
         <div class="body-page github-body">
-          <h1 class="main-text">Jeremy Cavallo</h1>
-          <h2 class="skills-list">GitHub</h2>
+          <h1 class="skills-list">GitHub</h1>
           <div style="display: flex; flex-direction: row; gap: 0.5rem">
-            <p>Coming soon, but for now, look at my</p>
-            <a
-              href="https://github.com/jjcavallo5"
-              style="text-decoration: underline; color: #efefef"
-              >GitHub</a
-            >
+            <h2>Take a look at my GitHub contributions!</h2>
           </div>
-          <div class="github-graph-container"></div>
+          
+          <div class="github-content-wrapper">
+            <p id="total-contributions"></p>
+            <div class="github-graph-container"></div>
+          </div>
         </div>
 
         <div class="body-page settings-body">
