@@ -107,5 +107,36 @@ getGithubContributions = async () => {
 };
 
 displayGithubRecentActivity = (activity) => {
-    console.log(activity);
+    console.log("Display");
+    let events = activity["data"];
+    let container = document.querySelector(".github-events-container");
+    let repositories = {};
+
+    for (let i = 0; i < events.length; i++) {
+        if (events[i]["type"] == "PushEvent") {
+            if (!Object.keys(repositories).includes(events[i]["repo"]["name"]))
+                repositories[events[i]["repo"]["name"]] = 1;
+            else repositories[events[i]["repo"]["name"]]++;
+        }
+    }
+
+    let pushEventsBlock = document.createElement("div");
+    pushEventsBlock.classList.add("push-events");
+    pushEventsBlock.innerHTML = `<svg id='push-event-icon' viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12M15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12M15 12H21M9 12H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <h3 id='push-events-header'>Commited to ${Object.keys(repositories).length} repositor${
+        Object.keys(repositories).length == 1 ? "y" : "ies"
+    }`;
+    for (let i = 0; i < Object.keys(repositories).length; i++) {
+        pushEventsBlock.innerHTML += `<span class='github-push-event'>
+        <a href=https://github.com/${
+            Object.keys(repositories)[i]
+        } id='github-repo-link' target='_blank'>${Object.keys(repositories)[i]}</a> <p>${
+            repositories[Object.keys(repositories)[i]]
+        } commits</p>
+        </span>`;
+    }
+
+    container.appendChild(pushEventsBlock);
 };
