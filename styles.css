@@ -253,8 +253,13 @@ body {
 }
 
 @media screen and (max-width: 830px) {
-    .file-explorer {
+    .file-explorer,
+    .footer {
         display: none;
+    }
+
+    .main-body {
+        height: calc(100vh - 30px);
     }
 
     .code-area {
