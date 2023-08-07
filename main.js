@@ -82,7 +82,7 @@ aboutClicked = () => {
     clearActive(sidebarIcons, tabs, pages)
 
     sidebarIcons[4].classList.add('sidebar-icon-active')
-    tabs[1].classList.add('tab-active')
+    tabs[2].classList.add('tab-active')
     pages[1].classList.add('body-active')
 
 }
@@ -102,7 +102,7 @@ contactClicked = () => {
     clearActive(sidebarIcons, tabs, pages)
 
     sidebarIcons[3].classList.add('sidebar-icon-active')
-    tabs[3].classList.add('tab-active')
+    tabs[4].classList.add('tab-active')
     pages[3].classList.add('body-active')
 }
 
@@ -121,7 +121,7 @@ projectsClicked = () => {
     clearActive(sidebarIcons, tabs, pages)
 
     sidebarIcons[2].classList.add('sidebar-icon-active')
-    tabs[2].classList.add('tab-active')
+    tabs[3].classList.add('tab-active')
     pages[2].classList.add('body-active')
 
 }
@@ -141,6 +141,7 @@ githubClicked = () => {
     clearActive(sidebarIcons, tabs, pages)
 
     sidebarIcons[1].classList.add('sidebar-icon-active')
+    tabs[1].classList.add('tab-active')
     pages[4].classList.add('body-active')
 
 }
