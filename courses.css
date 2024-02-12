@@ -1,0 +1,29 @@
+h1 {
+    font-family: "Times New Roman", Times, serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 3rem;
+    text-align: center;
+}
+
+body {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #1e1f29;
+    color: #efefef;
+}
+
+li {
+    font-size: 1.8rem;
+}
+
+a {
+    border: none;
+    background-color: #efefef;
+    color: black;
+    padding: 1rem;
+    border-radius: 10px;
+    text-decoration: none;
+}
