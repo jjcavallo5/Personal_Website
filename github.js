@@ -87,7 +87,6 @@ const generateGithubContributionGraph = (contributions_json) => {
             block.appendChild(tooltip);
             block.style = `height: 0.75rem; width: 0.75rem; background-color: ${color}; margin: 0.15rem; border-radius: 3px`;
             container.appendChild(block);
-            console.log("Block added");
         }
     }
 };
@@ -102,12 +101,10 @@ getGithubContributions = async () => {
     });
 
     let json = await response.json();
-    // console.log(json)
     generateGithubContributionGraph(json);
 };
 
 displayGithubRecentActivity = (activity) => {
-    console.log("Display");
     let events = activity["data"];
     let container = document.querySelector(".github-events-container");
     let repositories = {};
